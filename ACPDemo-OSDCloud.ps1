@@ -60,7 +60,7 @@ $('@echo off') | Out-File -FilePath "C:\Install\01.Install.cmd" -Encoding utf8 -
         $NewEntry = $ExisitingRun.CloneNode($true)
         $NewEntry.Order = [string]$([int]$($ExisitingRun | Sort Order -Descending).Order + 1).ToString()
     }
-    ElseIf ( $ExisitingRun1.GetType().BaseType.Name -eq "Array" ) {
+    ElseIf ( $ExisitingRun.GetType().BaseType.Name -eq "Array" ) {
         $NewEntry = $ExisitingRun[0].CloneNode($true)
         $NewEntry.Order = [string]$([int]$($ExisitingRun | Sort Order -Descending)[0].Order + 1).ToString()
     }
