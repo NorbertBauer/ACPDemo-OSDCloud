@@ -2,8 +2,8 @@
 Write-Host "Starting ACP Demo OS-Deployment"
 Start-Sleep -Seconds 5
 
-Uninstall-Module OSD -Force -AllVersions
-Install-Module OSD -Force
+#Uninstall-Module OSD -Force -AllVersions
+#Install-Module OSD -Force
 Import-Module OSD -Force
 
 #Remove-Item X:\OSDCloud\Config\AutopilotJSON\NB_ADemo_Autopilot_AutopilotConfigurationFile.json -Force -ErrorAction SilentlyContinue
