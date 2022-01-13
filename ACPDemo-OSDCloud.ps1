@@ -6,8 +6,11 @@ Uninstall-Module OSD -Force -AllVersions
 Install-Module OSD -Force
 Import-Module OSD -Force
 
-Start-OSDCloud -OSBuild 21H1 -OSLanguage de-de -OSEdition Enterprise -ZTI
+#Remove-Item X:\OSDCloud\Config\AutopilotJSON\NB_ADemo_Autopilot_AutopilotConfigurationFile.json -Force -ErrorAction SilentlyContinue
+#Remove-Item X:\OSDCloud\Config\AutopilotJSON\NB_ADEMO_Autopilot_PreProvision_AutopilotConfigurationFile.json -Force -ErrorAction SilentlyContinue
 
+$Global:StartOSDCloudGUI = @(OSVersion = 'Windows 11')
+Start-OSDCloud -OSBuild 21H2 -OSLanguage de-de -OSEdition Enterprise -ZTI
 
 # Create Install Folder
 New-Item "C:\Install" -ItemType Directory -ErrorAction SilentlyContinue
